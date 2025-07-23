@@ -7,18 +7,24 @@ import { HeroSection } from "./sections/HeroSection";
 import { TicketInfoSection } from "./sections/TicketInfoSection";
 import { WhySponsorSection } from "./sections/WhySponsorSection";
 
-export const Option = (): JSX.Element => {
+export function Option() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
-      <div className="w-full">
-        <HeroSection />
+    <div className="min-h-screen bg-white">
+      <HeroSection />
+      <div id="about">
         <AboutUsSection />
-        <AboutHostSection />
-        <WhySponsorSection />
+      </div>
+      <AboutHostSection />
+      <WhySponsorSection />
+      <div id="agenda">
         <EventAgendaSection />
+      </div>
+      <div id="tickets">
         <TicketInfoSection />
+      </div>
+      <div id="contact">
         <ContactUsSection />
       </div>
     </div>
   );
-};
+}
