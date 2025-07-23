@@ -33,8 +33,14 @@ export const ContactUsSection = (): JSX.Element => {
 
   return (
     <section id="contact" className="relative w-full bg-[#800000] py-16">
-    
-      <div className="absolute inset-0 bg-black/25 z-0"></div>
+      {/* Geometric background pattern with shared image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+        style={{
+          backgroundImage: `url('/attached_assets/image_1753276548472.png')`
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-black/25 z-5"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {}

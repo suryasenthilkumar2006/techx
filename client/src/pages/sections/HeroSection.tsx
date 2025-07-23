@@ -33,8 +33,15 @@ export const HeroSection = (): JSX.Element => {
   return (
     <section id="home" className="relative w-full min-h-screen bg-white">
       <div className="relative w-full h-screen bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(62,5,5,1)_50%,rgba(144,8,8,1)_100%)]">
+        {/* Geometric background pattern with shared image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+          style={{
+            backgroundImage: `url('/client/public/figmaAssets/background-pattern.jpg')`
+          }}
+        ></div>
         {/* Dark overlay for enhanced depth */}
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="absolute inset-0 bg-black/30 z-10"></div>
         
         {/* Navigation menu at the top */}
         <div className="absolute top-0 left-0 right-0 flex w-full items-center justify-center pt-8 z-50">
@@ -58,7 +65,7 @@ export const HeroSection = (): JSX.Element => {
         </div>
 
         {/* Main content container */}
-        <div className="relative flex flex-col items-center justify-center h-full pt-20 z-10">
+        <div className="relative flex flex-col items-center justify-center h-full pt-20 z-20">
           {/* Event logo/image */}
           <div className="flex flex-col items-center mb-8">
             <div className="relative group">

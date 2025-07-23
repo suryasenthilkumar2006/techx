@@ -74,9 +74,9 @@ export const TicketInfoSection = (): JSX.Element => {
 
   // Render a ticket card
   const renderTicketCard = (ticket: (typeof day1And2Tickets)[0]) => (
-    <Card className="bg-black rounded-[30px] border-4 border-white shadow-[10px_10px_10px_#0000004c] px-2.5 py-4">
-      <CardContent className="p-0">
-        <div className="flex flex-col w-[325px] items-center justify-center gap-[17px]">
+    <Card className="bg-black rounded-[30px] border-4 border-white shadow-[10px_10px_10px_#0000004c] px-2.5 py-4 w-[340px] h-[420px] flex flex-col">
+      <CardContent className="p-0 flex-1 flex flex-col justify-between">
+        <div className="flex flex-col w-full items-center justify-start gap-[17px] h-full">
           <div className="inline-flex items-center justify-center gap-2.5">
             <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-2xl text-center">
               <span>{ticket.type} </span>
@@ -84,21 +84,15 @@ export const TicketInfoSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="flex flex-col w-[314.89px] items-start gap-2.5">
-            <div className="relative w-[322.89px] h-[198.64px] mr-[-8.00px]">
-              {ticket.benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="absolute"
-                  style={{ top: `${index * 58}px` }}
-                >
-                  <CheckIcon className="absolute w-[19px] h-[21px] left-0" />
-                  <div className="absolute w-[287px] left-7 [font-family:'Istok_Web',Helvetica] font-bold text-white text-[22px]">
-                    {benefit}
-                  </div>
+          <div className="flex flex-col w-full items-start gap-4 flex-1 justify-center px-4">
+            {ticket.benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-3 w-full">
+                <CheckIcon className="w-[19px] h-[21px] text-white flex-shrink-0" />
+                <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-[20px] flex-1">
+                  {benefit}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </CardContent>
@@ -114,7 +108,14 @@ export const TicketInfoSection = (): JSX.Element => {
 
   return (
     <section id="tickets" className="relative w-full min-h-screen py-24 bg-gradient-to-b from-[#800000] to-[#2d0303]">
-      <div className="relative w-full">
+      {/* Geometric background pattern */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 z-0"
+        style={{
+          backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDAgTDQwIDIwIEwyMCA0MCBMMCA0MFoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPgo8L3N2Zz4=')`
+        }}
+      ></div>
+      <div className="relative w-full z-10">
         <h1 className="text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl mb-12">
           Reserve Your Spot!
         </h1>

@@ -41,7 +41,14 @@ export const AboutUsSection = (): JSX.Element => {
 
   return (
     <section id="about" className="relative w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
-      <div className="relative">
+      {/* Geometric background pattern with shared image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+        style={{
+          backgroundImage: `url('/client/public/background-pattern.jpg')`
+        }}
+      ></div>
+      <div className="relative z-10">
         <div className="w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
           {/* Vector images at the top */}
           <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] p-8">
