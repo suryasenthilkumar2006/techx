@@ -113,7 +113,7 @@ export const TicketInfoSection = (): JSX.Element => {
   );
 
   return (
-    <section className="w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)] py-20">
+    <section id="tickets" className="relative w-full min-h-screen py-24 bg-gradient-to-b from-[#800000] to-[#2d0303]">
       <div className="relative w-full">
         <h1 className="text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl mb-12">
           Reserve Your Spot!

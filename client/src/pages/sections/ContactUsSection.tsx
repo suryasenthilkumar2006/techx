@@ -19,14 +19,12 @@ export const ContactUsSection = (): JSX.Element => {
     },
   ];
 
-  // Social media section
   const socialInfo = {
     title: "Stay tuned with us",
     instagram: "ieee_ssit_cs_society",
     facebook: "IEEE Computer Society - SSIT",
   };
 
-  // Address information
   const addressInfo = {
     title: "Address",
     details:
@@ -34,13 +32,18 @@ export const ContactUsSection = (): JSX.Element => {
   };
 
   return (
-    <section className="relative w-full bg-[#800000] py-16">
-      <div className="container mx-auto px-4">
-        {/* Header */}
+    <section id="contact" className="relative w-full bg-[#800000] py-16">
+    
+      <div className="absolute inset-0 bg-black/25 z-0"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {}
         <div className="flex flex-col items-center justify-center mb-8">
-          <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl">
-            Contact us
-          </h2>
+          <div className="bg-black/30 p-6 rounded-3xl backdrop-blur-sm border border-white/20 shadow-2xl">
+            <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl drop-shadow-xl">
+              Contact us
+            </h2>
+          </div>
         </div>
 
         {/* Description */}
@@ -57,11 +60,21 @@ export const ContactUsSection = (): JSX.Element => {
         <div className="flex justify-center mb-12">
           <Card className="w-full max-w-2xl bg-transparent border-0">
             <CardContent className="p-0">
-              <img
-                className="w-full h-auto object-cover"
-                alt="Location Map"
-                src="/figmaAssets/image-8-1.png"
-              />
+              <a
+                href="https://www.google.com/maps/place/Sri+Sairam+Institute+of+Technology/@12.9609357,80.0547164,1616m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3a52f51f638ddfbb:0xf3aef7ec7c8979ba!2sSri+Sairam+Institute+of+Technology!8m2!3d12.9606471!4d80.0532325!16s%2Fm%2F010qj3mw!3m5!1s0x3a52f51f638ddfbb:0xf3aef7ec7c8979ba!8m2!3d12.9606471!4d80.0532325!16s%2Fm%2F010qj3mw?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open location in Google Maps"
+              >
+                <div className="relative">
+                  <img
+                    className="w-full h-auto object-cover rounded-lg shadow-[0_16px_48px_0_rgba(80,0,0,0.85)] transition-transform duration-200 hover:scale-105"
+                    alt="Location Map"
+                    src="/figmaAssets/image-8-1.png"
+                  />
+                  <div className="absolute inset-0 bg-black/20 rounded-lg pointer-events-none"></div>
+                </div>
+              </a>
             </CardContent>
           </Card>
         </div>

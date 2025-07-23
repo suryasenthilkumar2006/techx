@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const AboutUsSection = (): JSX.Element => {
@@ -40,47 +40,49 @@ export const AboutUsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
+    <section id="about" className="relative w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
       <div className="relative">
         <div className="w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
-          {/* Vector images at the top with extended white border */}
-          <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] border-4 border-white rounded-lg p-8">
-            <img
+          {/* Vector images at the top */}
+          <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] p-8">
+            {/* <img
               className="relative w-full h-[480px]"
               alt="Vector"
               src="/figmaAssets/vector-1-1.svg"
-            />
+            /> */}
             <img
               className="relative w-[290px] h-[3px] -mt-1"
               alt="Vector"
               src="/figmaAssets/vector-6.svg"
             />
-          
-          {/* "Now Live In" label */}
-          <div className="flex items-center justify-center mx-auto w-[266px] px-3 py-[9px] bg-black rounded-[20px] overflow-hidden -mt-[338px]">
-            <div className="[font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl">
-              Now Live In
+          </div>
+          {/* Timer container with white border and equal spacing */}
+          <div className="flex flex-col items-center mx-auto w-full max-w-[900px] border-4 border-white rounded-lg p-12 mt-32 bg-black/10 shadow-2xl backdrop-blur-sm">
+            {/* "Now Live In" label */}
+            <div className="flex items-center justify-center w-[266px] px-3 py-[9px] bg-black rounded-[20px] overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
+              <div className="[font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl drop-shadow-lg">
+                Now Live In
+              </div>
             </div>
-          </div>
 
-          {/* Countdown timer */}
-          <div className="flex items-center justify-center gap-[29px] mx-auto mt-[82px] shadow-[10px_15px_4px_#00000040] mb-8">
-            {countdownItems.map((item, index) => (
-              <Card
-                key={index}
-                className="w-[145.65px] h-[191px] bg-black rounded-[30px] shadow-[0px_0px_15px_#0000004c]"
-              >
-                <CardContent className="p-0 h-full flex flex-col items-center justify-center">
-                  <div className="[font-family:'Inter',Helvetica] font-normal text-[#ff0000] text-5xl">
-                    {item.value}
-                  </div>
-                  <div className="[font-family:'Inter',Helvetica] font-bold text-white text-2xl tracking-[1.00px] mt-4">
-                    {item.label}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+            {/* Countdown timer */}
+            <div className="flex items-center justify-center gap-[29px]">
+              {countdownItems.map((item, index) => (
+                <Card
+                  key={index}
+                  className="w-[145.65px] h-[191px] bg-black rounded-[30px] shadow-[0px_0px_15px_#0000004c]"
+                >
+                  <CardContent className="p-0 h-full flex flex-col items-center justify-center">
+                    <div className="[font-family:'Inter',Helvetica] font-normal text-[#ff0000] text-5xl">
+                      {item.value}
+                    </div>
+                    <div className="[font-family:'Inter',Helvetica] font-bold text-white text-2xl tracking-[1.00px] mt-4">
+                      {item.label}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
 

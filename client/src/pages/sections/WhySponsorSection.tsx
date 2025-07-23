@@ -131,15 +131,15 @@ export const WhySponsorSection = (): JSX.Element => {
       </div>
 
       {/* Speakers Section */}
-      <div className="container mx-auto mt-32">
-        <Card className="w-[800px] h-[600px] mx-auto bg-white rounded-[50px] overflow-hidden shadow-[0px_4px_24px_28px_#00000080]">
+      <div className="container mx-auto mt-32 relative z-10">
+        <Card className="w-[800px] h-[600px] mx-auto bg-white rounded-[50px] overflow-hidden shadow-[0px_8px_32px_40px_#00000060] border-4 border-white/20 backdrop-blur-sm">
           <CardContent className="p-0 relative w-full h-full">
             {/* Speaker placeholder boxes positioned around the card */}
             {/* Top left - tall */}
-            <div className="absolute top-6 left-6 w-[180px] h-[280px] bg-[#2d0303] rounded-[30px] overflow-hidden">
+            <div className="absolute top-6 left-6 w-[180px] h-[280px] bg-[#2d0303] rounded-[30px] overflow-hidden shadow-2xl border-2 border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center">
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center">
+                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center shadow-xl border-2 border-white/20">
+                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center drop-shadow-lg">
                     coming soon
                   </div>
                 </div>
@@ -147,10 +147,10 @@ export const WhySponsorSection = (): JSX.Element => {
             </div>
 
             {/* Top right - wide */}
-            <div className="absolute top-6 right-6 w-[280px] h-[180px] bg-[#2d0303] rounded-[30px] overflow-hidden">
+            <div className="absolute top-6 right-6 w-[280px] h-[180px] bg-[#2d0303] rounded-[30px] overflow-hidden shadow-2xl border-2 border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center">
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center">
+                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center shadow-xl border-2 border-white/20">
+                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center drop-shadow-lg">
                     coming soon
                   </div>
                 </div>
@@ -158,10 +158,10 @@ export const WhySponsorSection = (): JSX.Element => {
             </div>
 
             {/* Bottom left - wide */}
-            <div className="absolute bottom-6 left-6 w-[280px] h-[180px] bg-[#2d0303] rounded-[30px] overflow-hidden">
+            <div className="absolute bottom-6 left-6 w-[280px] h-[180px] bg-[#2d0303] rounded-[30px] overflow-hidden shadow-2xl border-2 border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center">
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center">
+                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center shadow-xl border-2 border-white/20">
+                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center drop-shadow-lg">
                     coming soon
                   </div>
                 </div>
@@ -169,10 +169,10 @@ export const WhySponsorSection = (): JSX.Element => {
             </div>
 
             {/* Bottom right - tall */}
-            <div className="absolute bottom-6 right-6 w-[180px] h-[280px] bg-[#2d0303] rounded-[30px] overflow-hidden">
+            <div className="absolute bottom-6 right-6 w-[180px] h-[280px] bg-[#2d0303] rounded-[30px] overflow-hidden shadow-2xl border-2 border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center">
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center">
+                <div className="w-[120px] h-[120px] bg-[#717171] rounded-full flex items-center justify-center shadow-xl border-2 border-white/20">
+                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm text-center drop-shadow-lg">
                     coming soon
                   </div>
                 </div>
@@ -194,14 +194,19 @@ export const WhySponsorSection = (): JSX.Element => {
         </Card>
       </div>
 
+      {/* Dark overlay for section */}
+      <div className="absolute inset-0 bg-black/25 z-0"></div>
+      
       {/* Sponsors Section */}
-      <div className="container mx-auto mt-32">
-        <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl text-center">
-          Our Sponsors
-        </h2>
-        <p className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-3xl opacity-50 mt-8 text-center">
-          People who helped to make this event happen
-        </p>
+      <div className="container mx-auto mt-32 relative z-10">
+        <div className="bg-black/20 p-8 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
+          <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl text-center drop-shadow-xl">
+            Our Sponsors
+          </h2>
+          <p className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-3xl opacity-50 mt-8 text-center drop-shadow-lg">
+            People who helped to make this event happen
+          </p>
+        </div>
       </div>
     </section>
   );
