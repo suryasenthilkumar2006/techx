@@ -51,7 +51,7 @@ export const TicketInfoSection = (): JSX.Element => {
       ],
     },
     {
-      type: "IEEE MEMBER",
+      type: "    IEEE MEMBER",
       price: "₹749",
       benefits: [
         "Workshop",
