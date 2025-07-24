@@ -10,9 +10,9 @@ import { Option } from "@/pages/Option";
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
+      
       <Route path="/" component={Option} />
-      {/* Fallback to 404 */}
+      
       <Route component={NotFound} />
     </Switch>
   );

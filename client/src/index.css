@@ -94,7 +94,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
+ 
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -108,7 +108,7 @@ html {
   animation: scroll 30s linear infinite;
 }
 
-/* Professional shadow effects */
+ 
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -122,7 +122,7 @@ html {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Enhanced shadow utilities */
+ 
 .shadow-inset {
   box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.1);
 }
@@ -138,7 +138,7 @@ html {
     inset 0 1px 0 rgb(255 255 255 / 0.1);
 }
 
-/* Backdrop effects */
+ 
 .backdrop-glass {
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(0, 0, 0, 0.1);
