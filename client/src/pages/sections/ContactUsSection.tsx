@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const ContactUsSection = (): JSX.Element => {
-  // Contact section data
+  
   const contactInfo = [
     {
       title: "CS Advisor",
@@ -33,7 +33,7 @@ export const ContactUsSection = (): JSX.Element => {
 
   return (
     <section id="contact" className="relative w-full bg-[#800000] py-16">
-      {/* Geometric background pattern with shared image */}
+      
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 z-0"
         style={{
@@ -52,7 +52,7 @@ export const ContactUsSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Description */}
+        
         <div className="flex justify-center mb-12">
           <p className="max-w-4xl [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-2xl text-justify">
             Be part of something extraordinary. Join us at TechX 2025 to
@@ -62,7 +62,7 @@ export const ContactUsSection = (): JSX.Element => {
           </p>
         </div>
 
-        {/* Map Image */}
+        
         <div className="flex justify-center mb-12">
           <Card className="w-full max-w-2xl bg-transparent border-0">
             <CardContent className="p-0">
@@ -85,10 +85,10 @@ export const ContactUsSection = (): JSX.Element => {
           </Card>
         </div>
 
-        {/* Contact Information */}
+        
         <div className="flex flex-col space-y-8">
           <div className="flex flex-wrap justify-between gap-8">
-            {/* Contact persons */}
+            
             {contactInfo.map((info, index) => (
               <div key={index} className="flex flex-col">
                 <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-sm">
@@ -99,7 +99,7 @@ export const ContactUsSection = (): JSX.Element => {
               </div>
             ))}
 
-            {/* Social Media */}
+            
             <div className="flex flex-col">
               <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-sm">
                 {socialInfo.title}
@@ -114,7 +114,7 @@ export const ContactUsSection = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Address */}
+            
             <div className="flex flex-col">
               <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-sm">
                 {addressInfo.title} <br />
@@ -123,7 +123,7 @@ export const ContactUsSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Footer */}
+          
           <div className="flex justify-center mt-8">
             <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-[15px] text-center">
               ©Copyright IEEE SSIT SBC. All Rights Reserved

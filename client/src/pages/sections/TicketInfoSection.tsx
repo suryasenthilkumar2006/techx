@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 export const TicketInfoSection = (): JSX.Element => {
-  // Define ticket data for Day 1 & 2 Pass
+  
   const day1And2Tickets = [
     {
       type: "IEEE COMPUTER SOCIETY MEMBER",
@@ -38,7 +38,7 @@ export const TicketInfoSection = (): JSX.Element => {
     },
   ];
 
-  // Define ticket data for Day 2 Pass
+  
   const day2Tickets = [
     {
       type: "IEEE COMPUTER SOCIETY MEMBER",
@@ -72,7 +72,7 @@ export const TicketInfoSection = (): JSX.Element => {
     },
   ];
 
-  // Render a ticket card
+  
   const renderTicketCard = (ticket: (typeof day1And2Tickets)[0]) => (
     <Card className="bg-black rounded-[30px] border-4 border-white shadow-[10px_10px_10px_#0000004c] px-2.5 py-4 w-[340px] h-[420px] flex flex-col">
       <CardContent className="p-0 flex-1 flex flex-col justify-between">
@@ -108,7 +108,7 @@ export const TicketInfoSection = (): JSX.Element => {
 
   return (
     <section id="tickets" className="relative w-full min-h-screen py-24 bg-gradient-to-b from-[#800000] to-[#2d0303]">
-      {/* Geometric background pattern */}
+      
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 z-0"
         style={{

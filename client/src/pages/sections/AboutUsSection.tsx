@@ -2,7 +2,7 @@ import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const AboutUsSection = (): JSX.Element => {
-  // Countdown timer data
+  
   const countdownItems = [
     { value: "54", label: "DAYS" },
     { value: "24", label: "HOURS" },
@@ -10,7 +10,7 @@ export const AboutUsSection = (): JSX.Element => {
     { value: "20", label: "SECONDS" },
   ];
 
-  // Collaborator logos data
+  
   const collaboratorLogos = [
     {
       src: "/figmaAssets/cs-poster-4.png",
@@ -41,40 +41,40 @@ export const AboutUsSection = (): JSX.Element => {
 
   return (
     <section id="about" className="relative w-full min-h-screen overflow-hidden">
-      {/* Full-section geometric background image */}
+      
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 z-10"
         style={{
           backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
         }}
       ></div>
-      {/* Dark overlay for readability, less opaque to show background */}
+      
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,3,3,0.7)_0%,rgba(144,8,8,0.7)_100%)] z-20"></div>
       <div className="relative z-30">
         <div className="w-full bg-transparent">
-          {/* Vector images at the top */}
+          
           <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] p-8">
-            {/* <img
+            
               className="relative w-full h-[480px]"
               alt="Vector"
               src="/figmaAssets/vector-1-1.svg"
-            /> */}
+            
             <img
               className="relative w-[290px] h-[3px] -mt-1"
               alt="Vector"
               src="/figmaAssets/vector-6.svg"
             />
           </div>
-          {/* Timer container with white border and equal spacing */}
+          
           <div className="flex flex-col items-center mx-auto w-full max-w-[900px] border-4 border-white rounded-lg p-12 mt-10 bg-black/10 shadow-2xl backdrop-blur-sm">
-            {/* "Now Live In" label */}
+            
             <div className="flex items-center justify-center w-[266px] px-3 py-[9px] bg-black rounded-[20px] overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
               <div className="[font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl drop-shadow-lg">
                 Now Live In
               </div>
             </div>
 
-            {/* Countdown timer */}
+            
             <div className="flex items-center justify-center gap-[29px]">
               {countdownItems.map((item, index) => (
                 <Card
@@ -96,7 +96,7 @@ export const AboutUsSection = (): JSX.Element => {
 
 
 
-          {/* What is TechX section */}
+          
           <div className="flex flex-col items-center mx-auto max-w-[1020px] mt-[100px] px-4">
             <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-5xl text-center">
               <span className="text-white">What is Tech</span>
@@ -118,7 +118,7 @@ export const AboutUsSection = (): JSX.Element => {
             </p>
           </div>
 
-          {/* Our Collaborators section */}
+          
           <div className="flex flex-col items-center justify-center w-full mt-[200px]">
             <h3 className="opacity-75 text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl mb-6">
               Our Collaborators
@@ -134,7 +134,7 @@ export const AboutUsSection = (): JSX.Element => {
                     src={logo.src}
                   />
                 ))}
-                {/* Duplicate logos for seamless scrolling */}
+                
                 {collaboratorLogos.map((logo, index) => (
                   <img
                     key={`duplicate-${index}`}
@@ -143,7 +143,7 @@ export const AboutUsSection = (): JSX.Element => {
                     src={logo.src}
                   />
                 ))}
-                {/* Triple duplicate for smooth loop */}
+                
                 {collaboratorLogos.map((logo, index) => (
                   <img
                     key={`triple-${index}`}
