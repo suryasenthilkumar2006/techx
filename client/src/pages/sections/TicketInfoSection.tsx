@@ -110,9 +110,9 @@ export const TicketInfoSection = (): JSX.Element => {
     <section id="tickets" className="relative w-full min-h-screen py-24 bg-gradient-to-b from-[#800000] to-[#2d0303]">
       {/* Geometric background pattern */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 z-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 z-0"
         style={{
-          backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDAgTDQwIDIwIEwyMCA0MCBMMCA0MFoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPgo8L3N2Zz4=')`
+          backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
         }}
       ></div>
       <div className="relative w-full z-10">

@@ -40,16 +40,18 @@ export const AboutUsSection = (): JSX.Element => {
   ];
 
   return (
-    <section id="about" className="relative w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
-      {/* Geometric background pattern with shared image */}
+    <section id="about" className="relative w-full min-h-screen overflow-hidden">
+      {/* Full-section geometric background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 z-10"
         style={{
-          backgroundImage: `url('/client/public/background-pattern.jpg')`
+          backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
         }}
       ></div>
-      <div className="relative z-10">
-        <div className="w-full bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(144,8,8,1)_100%)]">
+      {/* Dark overlay for readability, less opaque to show background */}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,3,3,0.7)_0%,rgba(144,8,8,0.7)_100%)] z-20"></div>
+      <div className="relative z-30">
+        <div className="w-full bg-transparent">
           {/* Vector images at the top */}
           <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] p-8">
             {/* <img
@@ -64,7 +66,7 @@ export const AboutUsSection = (): JSX.Element => {
             />
           </div>
           {/* Timer container with white border and equal spacing */}
-          <div className="flex flex-col items-center mx-auto w-full max-w-[900px] border-4 border-white rounded-lg p-12 mt-32 bg-black/10 shadow-2xl backdrop-blur-sm">
+          <div className="flex flex-col items-center mx-auto w-full max-w-[900px] border-4 border-white rounded-lg p-12 mt-10 bg-black/10 shadow-2xl backdrop-blur-sm">
             {/* "Now Live In" label */}
             <div className="flex items-center justify-center w-[266px] px-3 py-[9px] bg-black rounded-[20px] overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
               <div className="[font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl drop-shadow-lg">
@@ -157,4 +159,4 @@ export const AboutUsSection = (): JSX.Element => {
       </div>
     </section>
   );
-};
+}

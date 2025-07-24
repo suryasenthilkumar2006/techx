@@ -33,11 +33,11 @@ export const HeroSection = (): JSX.Element => {
   return (
     <section id="home" className="relative w-full min-h-screen bg-white">
       <div className="relative w-full h-screen bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(62,5,5,1)_50%,rgba(144,8,8,1)_100%)]">
-        {/* Geometric background pattern with shared image */}
+
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 z-0"
           style={{
-            backgroundImage: `url('/client/public/figmaAssets/background-pattern.jpg')`
+            backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
           }}
         ></div>
         {/* Dark overlay for enhanced depth */}
@@ -79,7 +79,7 @@ export const HeroSection = (): JSX.Element => {
           </div>
 
           {/* Event venue */}
-          <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-2xl text-center tracking-[0] leading-[normal] mb-16 drop-shadow-lg px-8 py-4 bg-black/20 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl">
+          <div className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-2xl text-center tracking-[0] leading-[normal] mb-6 drop-shadow-lg px-8 py-4 bg-black/20 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl">
             Sri Sai Ram Institute of Technology, Chennai
           </div>
         </div>

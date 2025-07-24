@@ -35,9 +35,9 @@ export const ContactUsSection = (): JSX.Element => {
     <section id="contact" className="relative w-full bg-[#800000] py-16">
       {/* Geometric background pattern with shared image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 z-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 z-0"
         style={{
-          backgroundImage: `url('/attached_assets/image_1753276548472.png')`
+          backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
         }}
       ></div>
       <div className="absolute inset-0 bg-black/25 z-5"></div>
