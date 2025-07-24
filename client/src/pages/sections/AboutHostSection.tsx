@@ -1,9 +1,8 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 
 export const AboutHostSection = (): JSX.Element => {
   return (
-    <section className="relative w-full pt-20 pb-0 overflow-hidden bg-[linear-gradient(180deg,rgba(45,3,3,1)_0%,rgba(89,9,9,1)_50%,rgba(45,3,3,1)_100%)] min-h-0">
+    <section className="relative w-full min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Background image overlay */}
       <div className="absolute inset-0 w-full h-full">
         <img
@@ -12,60 +11,127 @@ export const AboutHostSection = (): JSX.Element => {
           src="/figmaAssets/rectangle-14.png"
         />
       </div>
-      {/* Strong dark shadow overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0 shadow-[0_40px_120px_40px_rgba(0,0,0,0.85)]"></div>
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50 z-0"></div>
 
       {/* Content container */}
-      <div className="relative z-20 container mx-auto px-8 lg:px-32 max-w-7xl pb-0">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16 lg:py-20">
         {/* Section heading */}
-        <h2 className="font-sans font-bold text-white text-6xl mb-16 text-center lg:text-left drop-shadow-2xl">
+        <h2 className="font-sans font-bold text-white text-4xl sm:text-5xl lg:text-6xl mb-12 lg:mb-16 text-center drop-shadow-2xl">
           The Host Institution
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left: Placement offers and company logos */}
-          <div className="flex flex-col items-center lg:items-start space-y-8 w-full max-w-xs mx-auto">
-            <div className="flex items-center space-x-6 bg-black/20 p-6 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-start max-w-7xl mx-auto">
+          {/* Left side: Institution info and stats */}
+          <div className="flex flex-col space-y-8 lg:space-y-10">
+            {/* Institution header with logo */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 bg-black/20 p-6 lg:p-8 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl">
               <img
-                className="w-20 h-20 object-contain drop-shadow-xl"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain drop-shadow-xl flex-shrink-0"
                 alt="Institution logo"
                 src="/figmaAssets/ellipse-4.png"
               />
-              <h3 className="font-sans font-bold text-white text-4xl lg:text-5xl leading-tight drop-shadow-lg">
-                Sri Sai Ram<br />
-                Institute of Technology
-              </h3>
+              <div className="text-center sm:text-left">
+                <h3 className="font-sans font-bold text-white text-2xl sm:text-3xl lg:text-4xl leading-tight drop-shadow-lg">
+                  Sri Sai Ram
+                  <br />
+                  Institute of Technology
+                </h3>
+              </div>
             </div>
-            <div className="bg-black/30 rounded-xl p-6 border border-white/10 shadow-xl flex flex-col items-center w-full">
-              <span className="text-5xl font-extrabold text-green-400 mb-2">1527+</span>
-              <span className="text-white text-lg font-semibold mb-1">Placement Offers (2025 Batch)</span>
-              <span className="text-white text-base opacity-80">1000+ offers every year</span>
+
+            {/* Placement statistics */}
+            <div className="bg-black/25 rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl backdrop-blur-sm">
+              <div className="text-center">
+                <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400 mb-3 block drop-shadow-lg">
+                  1527+
+                </span>
+                <span className="text-white text-lg sm:text-xl lg:text-2xl font-semibold mb-2 block">
+                  Placement Offers (2025 Batch)
+                </span>
+                <span className="text-white/80 text-base lg:text-lg">
+                  1000+ offers every year
+                </span>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-3 justify-center mt-4 w-full">
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/microsoft-logo.png" alt="Microsoft" className="h-10 w-auto bg-white rounded p-1" />
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/oracle-logo.png" alt="Oracle" className="h-10 w-auto bg-white rounded p-1" />
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/tcs-bot-logo.png" alt="TCS" className="h-10 w-auto bg-white rounded p-1" />
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/vmware-logo.png" alt="VMware" className="h-10 w-auto bg-white rounded p-1" />
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/aws-logo.png" alt="AWS" className="h-10 w-auto bg-white rounded p-1" />
-              <img src="https://sairamit.edu.in/wp-content/uploads/2023/11/cisco-logo.png" alt="Cisco" className="h-10 w-auto bg-white rounded p-1" />
+
+            {/* Company logos */}
+            <div className="bg-black/20 rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl backdrop-blur-sm">
+              <h4 className="text-white text-lg sm:text-xl font-semibold mb-6 text-center">
+                Top Recruiting Partners
+              </h4>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-6">
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://sairamit.edu.in/wp-content/uploads/2023/11/microsoft-logo.png"
+                    alt="Microsoft"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://sairamit.edu.in/wp-content/uploads/2023/11/oracle-logo.png"
+                    alt="Oracle"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://sairamit.edu.in/wp-content/uploads/2023/11/tcs-bot-logo.png"
+                    alt="TCS"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://sairamit.edu.in/wp-content/uploads/2023/11/vmware-logo.png"
+                    alt="VMware"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://www.pngplay.com/wp-content/uploads/3/Amazon-Web-Services-AWS-Logo-Transparent-PNG.png"
+                    alt="AWS"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white rounded-lg p-3 lg:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="https://sairamit.edu.in/wp-content/uploads/2023/11/cisco-logo.png"
+                    alt="Cisco"
+                    className="h-8 sm:h-10 lg:h-12 w-auto mx-auto object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right: Three main info paragraphs stacked vertically */}
-          <div className="flex flex-col space-y-6">
-            <div className="bg-black/20 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <p className="font-sans text-white text-lg leading-relaxed">
-                Sri Sairam Institute of Technology, Chennai, affiliated with Anna University and accredited with an 'A+' grade by NAAC and NBA, is a premier engineering college known for academic excellence and innovation.
+          {/* Right side: Description text blocks */}
+          <div className="flex flex-col space-y-6 lg:space-y-8">
+            <div className="bg-black/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl hover:bg-black/25 transition-colors duration-300">
+              <p className="font-sans text-white text-base sm:text-lg lg:text-xl leading-relaxed lg:leading-loose">
+                Sri Sairam Institute of Technology, Chennai, affiliated with
+                Anna University and accredited with an 'A+' grade by NAAC and
+                NBA, is a premier engineering college known for academic
+                excellence and innovation.
               </p>
             </div>
-            <div className="bg-black/20 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <p className="font-sans text-white text-lg leading-relaxed">
-                Through platforms like Ideathon, Solveathon, Innovathon, and Inspirathon, and initiatives like the Sairam Techno Incubation Foundation, it has supported over 85 startups in robotics, agriculture, healthcare, and defence.
+
+            <div className="bg-black/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl hover:bg-black/25 transition-colors duration-300">
+              <p className="font-sans text-white text-base sm:text-lg lg:text-xl leading-relaxed lg:leading-loose">
+                Through platforms like Ideathon, Solveathon, Innovathon, and
+                Inspirathon, and initiatives like the Sairam Techno Incubation
+                Foundation, it has supported over 85 startups in robotics,
+                agriculture, healthcare, and defence.
               </p>
             </div>
-            <div className="bg-black/20 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-              <p className="font-sans text-white text-lg leading-relaxed">
-                Empowering students to build real-world solutions aligned with the UN Sustainable Development Goals (SDGs).
+
+            <div className="bg-black/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl hover:bg-black/25 transition-colors duration-300">
+              <p className="font-sans text-white text-base sm:text-lg lg:text-xl leading-relaxed lg:leading-loose">
+                Empowering students to build real-world solutions aligned with
+                the UN Sustainable Development Goals (SDGs).
               </p>
             </div>
           </div>
@@ -73,4 +139,4 @@ export const AboutHostSection = (): JSX.Element => {
       </div>
     </section>
   );
-}
+};
