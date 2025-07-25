@@ -15,7 +15,7 @@ export function Option() {
         <AboutUsSection />
       </div>
       <AboutHostSection />
-      
+
       <WhySponsorSection />
       <div id="agenda">
         <EventAgendaSection />
