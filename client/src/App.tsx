@@ -10,9 +10,7 @@ import { Option } from "@/pages/Option";
 function Router() {
   return (
     <Switch>
-      
       <Route path="/" component={Option} />
-      
       <Route component={NotFound} />
     </Switch>
   );
