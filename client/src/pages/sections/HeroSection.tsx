@@ -121,12 +121,13 @@ export const HeroSection = (): JSX.Element => {
         <div className="relative flex flex-col items-center justify-center h-full pt-64 z-40">
           <div className="text-center space-y-8 max-w-6xl mx-auto px-4 sm:px-6">
             <div className="relative">
-              <div className="mb-12">
-                <h3 className="[font-family:'Aoboshi_One',Helvetica] font-medium text-white/90 text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-[0.2em] mb-4 drop-shadow-lg">
-                  IEEE SSIT SBC CS
-                </h3>
-                <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
-              </div>
+<div className="mb-6">
+  <h3 className="[font-family:'Aoboshi_One',Helvetica] font-medium text-white/90 text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-[0.2em] mb-4 drop-shadow-lg">
+    IEEE SSIT SBC CS
+  </h3>
+  <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+</div>
+
 
               <div className="flex items-center justify-center gap-6 md:gap-8 lg:gap-12 mb-8">
                 <h1 className="[font-family:'Aoboshi_One',Helvetica] font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight tracking-wide relative">
@@ -180,11 +181,12 @@ export const HeroSection = (): JSX.Element => {
                 </h2>
               </div>
               
-              <div className="relative">
-                <p className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white/95 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center tracking-wide leading-relaxed px-6 sm:px-8 py-6 bg-black/25 rounded-2xl backdrop-blur-xl border border-white/25 shadow-2xl">
-                  Sri Sai Ram Institute of Technology, Chennai
-                </p>
-              </div>
+<div className="relative">
+  <p className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white/95 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center tracking-wide leading-relaxed px-6 sm:px-8 py-6 bg-black/25 rounded-2xl backdrop-blur-xl border border-white/25 shadow-2xl">
+    Sri Sai Ram Institute of Technology, Chennai
+  </p>
+</div>
+<div className="mb-20"></div>
             </div>
 
             <div className="flex justify-center mt-16">

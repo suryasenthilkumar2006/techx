@@ -12,19 +12,20 @@ export const AboutHostSection = (): JSX.Element => {
         />
       </div>
 
-
+ 
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
+ 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16 lg:py-20">
-
+  
         <h2 className="font-sans font-bold text-white text-4xl sm:text-5xl lg:text-6xl mb-12 lg:mb-16 text-center drop-shadow-2xl">
           The Host Institution
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-start max-w-7xl mx-auto">
-
+   
           <div className="flex flex-col space-y-8 lg:space-y-10">
-
+ 
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 bg-black/20 p-6 lg:p-8 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl">
               <img
                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain drop-shadow-xl flex-shrink-0"
@@ -40,7 +41,7 @@ export const AboutHostSection = (): JSX.Element => {
               </div>
             </div>
 
-   
+  
             <div className="bg-black/25 rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl backdrop-blur-sm">
               <div className="text-center">
                 <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400 mb-3 block drop-shadow-lg">
@@ -106,7 +107,6 @@ export const AboutHostSection = (): JSX.Element => {
             </div>
           </div>
 
- 
           <div className="flex flex-col space-y-6 lg:space-y-8">
             <div className="bg-black/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl hover:bg-black/25 transition-colors duration-300">
               <p className="font-sans text-white text-base sm:text-lg lg:text-xl leading-relaxed lg:leading-loose">

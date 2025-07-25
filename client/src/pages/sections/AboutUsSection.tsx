@@ -1,16 +1,58 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const AboutUsSection = (): JSX.Element => {
-  
+  const targetDate = new Date("2025-08-15T09:00:00");
+
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+
+    let timeLeft = {
+      days: "00",
+      hours: "00",
+      minutes: "00",
+      seconds: "00",
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(
+          2,
+          "0",
+        ),
+        hours: String(
+          Math.floor((difference / (1000 * 60 * 60)) % 24),
+        ).padStart(2, "0"),
+        minutes: String(Math.floor((difference / (1000 * 60)) % 60)).padStart(
+          2,
+          "0",
+        ),
+        seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const countdownItems = [
-    { value: "54", label: "DAYS" },
-    { value: "24", label: "HOURS" },
-    { value: "30", label: "MINUTES" },
-    { value: "20", label: "SECONDS" },
+    { value: timeLeft.days, label: "DAYS" },
+    { value: timeLeft.hours, label: "HOURS" },
+    { value: timeLeft.minutes, label: "MINUTES" },
+    { value: timeLeft.seconds, label: "SECONDS" },
   ];
 
-  
   const collaboratorLogos = [
     {
       src: "/figmaAssets/cs-poster-4.png",
@@ -38,93 +80,248 @@ export const AboutUsSection = (): JSX.Element => {
       className: "w-[191px] h-[85px]",
     },
   ];
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      const bubbleElements = document.querySelectorAll(".professional-bubble");
+      const beanElements = document.querySelectorAll(".professional-bean");
+      const dynamicElements = document.querySelectorAll(".dynamic-element");
+
+      bubbleElements.forEach((element, index) => {
+        const speed = 0.2 + index * 0.03;
+        const yPos = -(scrolled * speed);
+        const xPos = Math.sin(scrolled * 0.008 + index) * 20;
+        const scale = 1 + Math.sin(scrolled * 0.006 + index) * 0.1;
+        (element as HTMLElement).style.transform =
+          `translateY(${yPos}px) translateX(${xPos}px) scale(${scale})`;
+      });
+
+      beanElements.forEach((element, index) => {
+        const speed = 0.15 + index * 0.04;
+        const yPos = -(scrolled * speed);
+        const xPos = Math.cos(scrolled * 0.005 + index * 0.7) * 25;
+        const rotateZ = scrolled * 0.08 + index * 30;
+        (element as HTMLElement).style.transform =
+          `translateY(${yPos}px) translateX(${xPos}px) rotateZ(${rotateZ}deg)`;
+      });
+
+      dynamicElements.forEach((element, index) => {
+        const speed = 0.1 + index * 0.02;
+        const yPos = -(scrolled * speed);
+        const opacity = 0.6 + Math.sin(scrolled * 0.01 + index) * 0.4;
+        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+        (element as HTMLElement).style.opacity = opacity.toString();
+      });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section id="about" className="relative w-full min-h-screen overflow-hidden">
-      
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 z-10"
-        style={{
-          backgroundImage: `url('https://www.dropbox.com/scl/fi/k83n31ithvnlgvu0dkcou/WhatsApp-Image-2025-07-23-at-22.35.26_d919ebf4.jpg?rlkey=b1npq90ebic8eo7csizbuk554&st=suvsrvc2&dl=1')`
-        }}
-      ></div>
-      
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,3,3,0.7)_0%,rgba(144,8,8,0.7)_100%)] z-20"></div>
+    <section
+      id="about"
+      className="relative w-full min-h-screen overflow-hidden bg-black"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-red via-red-950/20 to-black z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-red-900/10 to-black/90 z-11"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_40%,rgba(0, 0, 0, 0.15),transparent)] z-12"></div>
+      {[...Array(25)].map((_, i) => (
+        <div
+          key={`bubble-${i}`}
+          className="professional-bubble absolute pointer-events-none z-15"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 15}s`,
+            animationDuration: `${12 + Math.random() * 8}s`,
+          }}
+        >
+          <div
+            className="relative w-6 h-6 rounded-full shadow-lg animate-bubbleLife"
+            style={{
+              background: `radial-gradient(circle at 30% 30%, 
+                rgba(220,38,38,${0.3 + Math.random() * 0.2}) 0%, 
+                rgba(220,38,38,${0.1 + Math.random() * 0.1}) 70%, 
+                transparent 100%)`,
+              boxShadow: `
+                0 0 ${15 + Math.random() * 10}px rgba(220,38,38,0.4),
+                inset 0 ${2 + Math.random() * 2}px ${8 + Math.random() * 4}px rgba(220,38,38,0.2)
+              `,
+              backdropFilter: "blur(4px)",
+            }}
+          >
+            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-red-400/20 to-transparent"></div>
+          </div>
+        </div>
+      ))}
+      {[...Array(20)].map((_, i) => (
+        <div
+          key={`bean-${i}`}
+          className="professional-bean absolute pointer-events-none z-16"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 20}s`,
+            animationDuration: `${18 + Math.random() * 12}s`,
+          }}
+        >
+          <div
+            className="relative w-4 h-8 shadow-lg animate-beanLife"
+            style={{
+              background: `linear-gradient(145deg, 
+                rgba(220,38,38,${0.2 + Math.random() * 0.15}) 0%, 
+                rgba(220,38,38,${0.1 + Math.random() * 0.1}) 50%, 
+                rgba(220,38,38,${0.05 + Math.random() * 0.05}) 100%)`,
+              borderRadius: "50% 50% 50% 50% / 60% 60% 40% 40%",
+              boxShadow: `
+                0 ${8 + Math.random() * 6}px ${25 + Math.random() * 15}px rgba(220,38,38,0.25),
+                inset 0 ${1 + Math.random() * 2}px ${6 + Math.random() * 4}px rgba(220,38,38,0.15)
+              `,
+              backdropFilter: "blur(3px)",
+            }}
+          >
+            <div className="absolute inset-1 rounded-full bg-gradient-to-br from-red-400/15 to-transparent opacity-60"></div>
+          </div>
+        </div>
+      ))}
+      {[...Array(30)].map((_, i) => (
+        <div
+          key={`particle-${i}`}
+          className="dynamic-element absolute opacity-20 pointer-events-none z-17"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 25}s`,
+            animationDuration: `${20 + Math.random() * 15}s`,
+          }}
+        >
+          <div
+            className="w-1 h-1 rounded-full animate-particleFloat"
+            style={{
+              background: `radial-gradient(circle, 
+                rgba(220,38,38,${0.4 + Math.random() * 0.3}) 0%, 
+                rgba(220,38,38,${0.2 + Math.random() * 0.2}) 70%, 
+                transparent 100%)`,
+              boxShadow: `0 0 ${6 + Math.random() * 4}px rgba(220,38,38,0.5)`,
+            }}
+          />
+        </div>
+      ))}
+
       <div className="relative z-30">
         <div className="w-full bg-transparent">
-          
           <div className="flex flex-col items-center justify-end mx-auto w-full max-w-[1200px] p-8">
-            
-              className="relative w-full h-[480px]"
-              alt="Vector"
-              src="/figmaAssets/vector-1-1.svg"
-            
             <img
-              className="relative w-[290px] h-[3px] -mt-1"
+              className="relative w-[290px] h-[3px] -mt-1 drop-shadow-xl filter brightness-0 invert"
               alt="Vector"
               src="/figmaAssets/vector-6.svg"
             />
           </div>
-          
-          <div className="flex flex-col items-center mx-auto w-full max-w-[900px] border-4 border-white rounded-lg p-12 mt-10 bg-black/10 shadow-2xl backdrop-blur-sm">
-            
-            <div className="flex items-center justify-center w-[266px] px-3 py-[9px] bg-black rounded-[20px] overflow-hidden shadow-2xl backdrop-blur-sm mb-12">
-              <div className="[font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl drop-shadow-lg">
-                Now Live In
+          <div className="flex flex-col items-center mx-auto w-full max-w-[900px] mt-10 px-4">
+            <div className="relative group perspective-1000 transform-gpu">
+              <div className="absolute -inset-8 bg-gradient-to-br from-black/80 via-red-950/60 to-black/80 rounded-3xl blur-3xl opacity-70 group-hover:opacity-90 transition-all duration-1000"></div>
+              <div className="absolute -inset-4 bg-red-950/40 rounded-2xl blur-2xl opacity-60"></div>
+
+              <div className="relative border-2 border-red-600/50 rounded-3xl p-12 bg-gradient-to-br from-black/90 via-red-950/20 to-black/90 backdrop-blur-xl shadow-[0_40px_100px_rgba(0,0,0,0.9)] hover:shadow-[0_50px_120px_rgba(220,38,38,0.4)] transition-all duration-1000 hover:-translate-y-4 hover:scale-[1.02] group-hover:border-red-500/70 overflow-hidden">
+
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/8 via-transparent to-red-600/5 rounded-3xl pointer-events-none"></div>
+                <div className="relative group/badge mb-12 flex justify-center">
+                  <div className="absolute -inset-3 bg-red-600/30 rounded-3xl blur-xl opacity-70 group-hover/badge:opacity-95 transition-all duration-700"></div>
+                  <div className="relative flex items-center justify-center w-[280px] px-8 py-4 bg-gradient-to-br from-black/95 via-red-950/40 to-black/95 rounded-3xl border-2 border-red-600/60 shadow-[0_25px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(220,38,38,0.5)] transition-all duration-700 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent -skew-x-12 -translate-x-full group-hover/badge:translate-x-full transition-transform duration-1200"></div>
+
+                    <div className="relative [font-family:'Crimson_Text',Helvetica] font-normal text-white text-4xl drop-shadow-2xl tracking-wide">
+                      Now Live In
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-8">
+                  {countdownItems.map((item, index) => (
+                    <div
+                      key={index}
+                      className="relative group/card perspective-1000 transform-gpu"
+                    >
+                      <div className="absolute -inset-4 bg-red-600/20 rounded-3xl blur-2xl opacity-60 group-hover/card:opacity-85 transition-all duration-800"></div>
+                      <div className="absolute -inset-2 bg-black/80 rounded-3xl blur-xl opacity-95"></div>
+
+                      <Card className="relative w-[140px] h-[180px] bg-gradient-to-br from-black/95 via-red-950/30 to-black/95 rounded-3xl border-2 border-red-600/50 shadow-[0_30px_70px_rgba(0,0,0,0.95)] hover:shadow-[0_40px_90px_rgba(220,38,38,0.5)] transition-all duration-1000 hover:-translate-y-6 hover:scale-110 group-hover/card:border-red-500/70 overflow-hidden backdrop-blur-xl">
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-600/8 via-transparent to-red-600/5 rounded-3xl pointer-events-none"></div>
+
+                        <CardContent className="relative p-0 h-full flex flex-col items-center justify-center z-10">
+                          <div className="[font-family:'Inter',Helvetica] font-bold text-red-500 text-5xl drop-shadow-2xl group-hover/card:text-red-400 transition-all duration-500 tracking-wider">
+                            {item.value}
+                          </div>
+                          <div className="[font-family:'Inter',Helvetica] font-bold text-white text-xl tracking-[2px] mt-4 drop-shadow-xl group-hover/card:text-gray-100 transition-all duration-500">
+                            {item.label}
+                          </div>
+                        </CardContent>
+
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/15 to-transparent -skew-x-12 -translate-x-full group-hover/card:translate-x-full transition-transform duration-1200 rounded-3xl"></div>
+                      </Card>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+          </div>
+          <div className="flex flex-col items-center mx-auto max-w-[1100px] mt-[100px] px-4">
+            <div className="relative group mb-12 perspective-1000 transform-gpu">
+              <div className="absolute -inset-6 bg-red-600/20 rounded-3xl blur-2xl opacity-70 group-hover:opacity-90 transition-all duration-800"></div>
+              <div className="absolute -inset-3 bg-black/80 rounded-2xl blur-xl opacity-90"></div>
+              <div className="relative bg-gradient-to-br from-black/90 via-red-950/20 to-black/90 backdrop-blur-2xl border-2 border-red-600/40 rounded-3xl px-10 py-6 shadow-[0_35px_80px_rgba(0,0,0,0.8)] hover:shadow-[0_40px_100px_rgba(220,38,38,0.4)] transition-all duration-1000 hover:-translate-y-3 hover:scale-105 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-3xl pointer-events-none"></div>
+                <h2 className="relative [font-family:'Aoboshi_One',Helvetica] font-normal text-5xl text-center drop-shadow-2xl tracking-wide">
+                  <span className="text-white drop-shadow-[0_6px_20px_rgba(255,255,255,0.4)]">
+                    What is Tech
+                  </span>
+                  <span className="text-red-500 drop-shadow-[0_6px_20px_rgba(220,38,38,0.6)]">
+                    X{" "}
+                  </span>
+                  <span className="text-white drop-shadow-[0_6px_20px_rgba(255,255,255,0.4)]">
+                    ?
+                  </span>
+                </h2>
+              </div>
+            </div>
+            <div className="relative group perspective-1000 transform-gpu">
+              <div className="absolute -inset-6 bg-black/60 rounded-3xl blur-3xl opacity-60 group-hover:opacity-85 transition-all duration-1000"></div>
+              <div className="absolute -inset-2 bg-red-600/15 rounded-2xl blur-lg opacity-60"></div>
+              <div className="relative bg-gradient-to-br from-black/95 via-red-950/15 to-black/95 backdrop-blur-2xl border-2 border-red-600/30 rounded-3xl p-10 shadow-[0_40px_100px_rgba(0,0,0,0.9)] hover:shadow-[0_50px_120px_rgba(220,38,38,0.3)] transition-all duration-1000 hover:-translate-y-4 hover:scale-[1.01] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-3xl pointer-events-none"></div>
 
-            
-            <div className="flex items-center justify-center gap-[29px]">
-              {countdownItems.map((item, index) => (
-                <Card
-                  key={index}
-                  className="w-[145.65px] h-[191px] bg-black rounded-[30px] shadow-[0px_0px_15px_#0000004c]"
-                >
-                  <CardContent className="p-0 h-full flex flex-col items-center justify-center">
-                    <div className="[font-family:'Inter',Helvetica] font-normal text-[#ff0000] text-5xl">
-                      {item.value}
-                    </div>
-                    <div className="[font-family:'Inter',Helvetica] font-bold text-white text-2xl tracking-[1.00px] mt-4">
-                      {item.label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                <p className="relative [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-xl text-justify leading-relaxed drop-shadow-xl tracking-wide">
+                  TechX Madras is a premier initiative hosted by the IEEE CS SBC
+                  of SSIT, as part of the IEEE CS SYP TechX series, in
+                  association with the IEEE CS Madras Chapter. Gathering over
+                  200+ passionate tech minds, this dynamic two-day event offers
+                  a vibrant mix of learning, collaboration, and innovation.
+                  Participants dive into engaging hands-on workshops,
+                  thought-provoking tech talks led by industry experts, and
+                  high-energy sessions including debates, panel discussions, and
+                  a thrilling hackathon&nbsp;&nbsp;all designed to inspire,
+                  connect, and ignite the next generation of tech leaders.
+                </p>
+              </div>
             </div>
           </div>
-
-
-
-          
-          <div className="flex flex-col items-center mx-auto max-w-[1020px] mt-[100px] px-4">
-            <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-5xl text-center">
-              <span className="text-white">What is Tech</span>
-              <span className="text-[#ff0000]">X </span>
-              <span className="text-white">?</span>
-            </h2>
-
-            <p className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-2xl text-justify mt-6">
-              TechX Madras is a premier initiative hosted by the IEEE CS SBC of
-              SSIT, as part of the IEEE CS SYP TechX series, in association with
-              the IEEE CS Madras Chapter. Gathering over 200+ passionate tech
-              minds, this dynamic two-day event offers a vibrant mix of
-              learning, collaboration, and innovation. Participants dive into
-              engaging hands-on workshops, thought-provoking tech talks led by
-              industry experts, and high-energy sessions including debates,
-              panel discussions, and a thrilling hackathon&nbsp;&nbsp;all
-              designed to inspire, connect, and ignite the next generation of
-              tech leaders.
-            </p>
-          </div>
-
-          
           <div className="flex flex-col items-center justify-center w-full mt-[200px]">
-            <h3 className="opacity-75 text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl mb-6">
-              Our Collaborators
-            </h3>
+            <div className="relative group mb-12 perspective-1000 transform-gpu">
+              <div className="absolute -inset-6 bg-red-600/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-85 transition-all duration-800"></div>
+              <div className="absolute -inset-3 bg-black/80 rounded-2xl blur-xl opacity-95"></div>
+              <div className="relative bg-gradient-to-br from-black/95 via-red-950/20 to-black/95 backdrop-blur-2xl border-2 border-red-600/40 rounded-3xl px-10 py-5 shadow-[0_35px_80px_rgba(0,0,0,0.9)] hover:shadow-[0_40px_100px_rgba(220,38,38,0.3)] transition-all duration-1000 hover:-translate-y-3 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-3xl pointer-events-none"></div>
+                <h3 className="relative opacity-95 text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-5xl drop-shadow-2xl tracking-wide">
+                  Our Collaborators
+                </h3>
+              </div>
+            </div>
+            <div className="relative w-full h-[140px] overflow-hidden group perspective-1000">
+              <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-red-950/10 to-black/95 shadow-[inset_0_15px_40px_rgba(0,0,0,0.95)] border-y-2 border-red-600/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-transparent to-black/95 pointer-events-none z-10"></div>
 
-            <div className="w-full h-[146px] bg-black overflow-hidden relative">
+      <div className="w-full h-[146px] bg-black overflow-hidden relative">
               <div className="flex items-center gap-20 p-2.5 animate-scroll">
                 {collaboratorLogos.map((logo, index) => (
                   <img
@@ -157,6 +354,95 @@ export const AboutUsSection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes bubbleLife {
+          0% {
+            opacity: 0;
+            transform: scale(0) translateY(0px);
+          }
+          20% {
+            opacity: 0.8;
+            transform: scale(1) translateY(-20px);
+          }
+          80% {
+            opacity: 0.3;
+            transform: scale(1.2) translateY(-80px);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(0) translateY(-120px);
+          }
+        }
+
+        @keyframes beanLife {
+          0% {
+            opacity: 0;
+            transform: scale(0) rotate(0deg) translateY(0px);
+          }
+          25% {
+            opacity: 0.7;
+            transform: scale(1) rotate(90deg) translateY(-30px);
+          }
+          75% {
+            opacity: 0.4;
+            transform: scale(1.1) rotate(270deg) translateY(-90px);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(0) rotate(360deg) translateY(-140px);
+          }
+        }
+
+        @keyframes particleFloat {
+          0% {
+            opacity: 0;
+            transform: translateY(0px) scale(0);
+          }
+          30% {
+            opacity: 0.8;
+            transform: translateY(-30px) scale(1);
+          }
+          70% {
+            opacity: 0.3;
+            transform: translateY(-70px) scale(1.2);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-100px) scale(0);
+          }
+        }
+
+        @keyframes animate-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .animate-scroll {
+          animation: animate-scroll 30s linear infinite;
+        }
+
+        .animation-paused {
+          animation-play-state: paused;
+        }
+
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+
+        .transform-gpu {
+          transform: translateZ(0);
+        }
+
+        .hover\\:scale-115:hover {
+          transform: scale(1.15);
+        }
+      `}</style>
     </section>
   );
-}
+};
