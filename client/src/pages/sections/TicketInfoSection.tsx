@@ -9,7 +9,8 @@ export const TicketInfoSection = (): JSX.Element => {
   const day1And2Tickets = [
     {
       type: "IEEE COMPUTER SOCIETY MEMBER",
-      price: "₹699",
+      originalPrice: "₹500",
+      offerPrice: "₹300",
       benefits: [
         "24Hrs Hackathon",
         "Entry to all Events",
@@ -19,7 +20,8 @@ export const TicketInfoSection = (): JSX.Element => {
     },
     {
       type: "IEEE MEMBER",
-      price: "₹749",
+      originalPrice: "₹550",
+      offerPrice: "₹350",
       benefits: [
         "24Hrs Hackathon",
         "Entry to all Events",
@@ -29,7 +31,8 @@ export const TicketInfoSection = (): JSX.Element => {
     },
     {
       type: "NON - IEEE MEMBER",
-      price: "₹899",
+      originalPrice: "₹600",
+      offerPrice: "₹400",
       benefits: [
         "24Hrs Hackathon",
         "Entry to all Events",
@@ -43,7 +46,8 @@ export const TicketInfoSection = (): JSX.Element => {
   const day2Tickets = [
     {
       type: "IEEE COMPUTER SOCIETY MEMBER",
-      price: "₹699",
+      originalPrice: "₹300",
+      offerPrice: "₹200",
       benefits: [
         "Workshop",
         "Entry to all Events",
@@ -52,8 +56,9 @@ export const TicketInfoSection = (): JSX.Element => {
       ],
     },
     {
-      type: "    IEEE MEMBER",
-      price: "₹749",
+      type: "IEEE MEMBER",
+      originalPrice: "₹350",
+      offerPrice: "₹250",
       benefits: [
         "Workshop",
         "Entry to all Events",
@@ -63,7 +68,8 @@ export const TicketInfoSection = (): JSX.Element => {
     },
     {
       type: "NON - IEEE MEMBER",
-      price: "₹899",
+      originalPrice: "₹400",
+      offerPrice: "₹300",
       benefits: [
         "Workshop",
         "Entry to all Events",
@@ -81,7 +87,7 @@ export const TicketInfoSection = (): JSX.Element => {
         animationDelay: `${index * 0.2}s`
       }}
     >
-  <Card className="relative w-[420px] h-[420px] bg-gradient-to-br from-black via-gray-900 to-black rounded-[30px] border-4 border-white/20 shadow-[0px_25px_60px_rgba(0,0,0,0.8),inset_0px_1px_0px_rgba(255,255,255,0.1)] px-2.5 py-4 flex flex-col transition-all duration-700 hover:shadow-[0px_35px_80px_rgba(0,0,0,0.9),inset_0px_2px_0px_rgba(255,255,255,0.2)] hover:scale-[1.05] hover:-translate-y-3 hover:rotate-x-3 hover:rotate-y-2 transform-gpu preserve-3d animate-fade-in-up">
+  <Card className="relative w-[400px] h-[500px] min-w-[400px] min-h-[500px] max-w-[400px] max-h-[500px] bg-gradient-to-br from-black via-gray-900 to-black rounded-[30px] border-4 border-white/20 shadow-[0px_25px_60px_rgba(0,0,0,0.8),inset_0px_1px_0px_rgba(255,255,255,0.1)] px-2.5 py-4 flex flex-col transition-all duration-700 hover:shadow-[0px_35px_80px_rgba(0,0,0,0.9),inset_0px_2px_0px_rgba(255,255,255,0.2)] hover:scale-[1.05] hover:-translate-y-3 hover:rotate-x-3 hover:rotate-y-2 transform-gpu preserve-3d animate-fade-in-up">
         <div className="absolute inset-0 rounded-[30px] bg-gradient-to-br from-white/5 via-transparent to-black/20 pointer-events-none"></div>
       
         <div className="absolute inset-0 overflow-hidden rounded-[30px] pointer-events-none">
@@ -109,15 +115,25 @@ export const TicketInfoSection = (): JSX.Element => {
                   {ticket.type}
             </div>
   
-                <div className="relative">
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-red-500 text-[40px] text-center drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:text-red-400 group/price-hover:animate-bounce">
-                    {ticket.price}
-          </div>
-
-                  
-                  
-                  <div className="absolute -top-2 -right-2 w-3 h-3 bg-gradient-to-br from-red-400 to-red-600 rounded-full animate-pulse shadow-lg"></div>
-                  <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-gradient-to-br from-white/50 to-white/30 rounded-full animate-pulse"></div>
+                <div className="relative flex flex-col items-center gap-2">
+                  <div className="relative">
+                    <div className="[font-family:'Istok_Web',Helvetica] font-bold text-gray-400 text-[24px] text-center drop-shadow-lg line-through decoration-red-500 decoration-2 opacity-70 transition-all duration-300 group-hover:opacity-50">
+                      {ticket.originalPrice}
+                    </div>
+                    <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 transform -translate-y-1/2 animate-pulse"></div>
+                  </div>
+                  <div className="relative">
+                    <div className="[font-family:'Istok_Web',Helvetica] font-bold text-green-400 text-[40px] text-center drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:text-green-300 animate-pulse">
+                      {ticket.offerPrice}
+                    </div>
+                    <div className="absolute -top-2 -left-2 w-3 h-3 bg-gradient-to-br from-green-400 to-green-600 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute -bottom-2 -right-2 w-2 h-2 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg px-3 py-1 border border-green-500/30">
+                    <span className="text-green-300 text-sm font-semibold">
+                      Save ₹{parseInt(ticket.originalPrice.replace('₹', '')) - parseInt(ticket.offerPrice.replace('₹', ''))}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -236,7 +252,7 @@ export const TicketInfoSection = (): JSX.Element => {
           <div className="relative group perspective-1000 mb-12">
             <h2 className="text-center [font-family:'Istok_Web',Helvetica] font-bold text-white text-[36px] lg:text-[42px] transition-all duration-500 hover:scale-105 hover:text-red-100 cursor-default drop-shadow-xl">
               <span className="bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
-          Day 1 &amp; 2 Pass
+          Both Day Pass
               </span>
         </h2>
 
