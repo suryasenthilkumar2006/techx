@@ -12,10 +12,12 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹500",
       offerPrice: "₹300",
       benefits: [
-        "24Hrs Hackathon",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+       "50% Discount on ticket price",
+        "Hackathon",
+        "Suprise Event",
+        "Workshop",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
     {
@@ -23,10 +25,12 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹550",
       offerPrice: "₹350",
       benefits: [
-        "24Hrs Hackathon",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+       "40% Discount on ticket price",
+        "Hackathon",
+        "Suprise Event",
+        "Workshop",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
     {
@@ -34,10 +38,12 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹600",
       offerPrice: "₹400",
       benefits: [
-        "24Hrs Hackathon",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+       "30% Discount on ticket price",
+        "Hackathon",
+        "Suprise Event",
+        "Workshop",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
   ];
@@ -49,10 +55,11 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹300",
       offerPrice: "₹200",
       benefits: [
+       "50% Discount on ticket price",
+        "Hackathon",
         "Workshop",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
     {
@@ -60,10 +67,10 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹350",
       offerPrice: "₹250",
       benefits: [
+       "35% Discount on ticket price",
         "Workshop",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
     {
@@ -71,10 +78,11 @@ export const TicketInfoSection = (): JSX.Element => {
       originalPrice: "₹400",
       offerPrice: "₹300",
       benefits: [
+        "25% Discount on ticket price",
+        "Hackathon",
         "Workshop",
-        "Entry to all Events",
-        "Lunch and Refreshements",
-        "Goodies",
+        "Panel Discussion / Debate",
+        "Food",
       ],
     },
   ];
@@ -87,7 +95,7 @@ export const TicketInfoSection = (): JSX.Element => {
         animationDelay: `${index * 0.2}s`
       }}
     >
-  <Card className="relative w-[400px] h-[500px] min-w-[400px] min-h-[500px] max-w-[400px] max-h-[500px] bg-gradient-to-br from-black via-gray-900 to-black rounded-[30px] border-4 border-white/20 shadow-[0px_25px_60px_rgba(0,0,0,0.8),inset_0px_1px_0px_rgba(255,255,255,0.1)] px-2.5 py-4 flex flex-col transition-all duration-700 hover:shadow-[0px_35px_80px_rgba(0,0,0,0.9),inset_0px_2px_0px_rgba(255,255,255,0.2)] hover:scale-[1.05] hover:-translate-y-3 hover:rotate-x-3 hover:rotate-y-2 transform-gpu preserve-3d animate-fade-in-up">
+  <Card className="relative w-[400px] h-[620px] min-w-[400px] min-h-[620px] max-w-[400px] max-h-[620px] bg-gradient-to-br from-black via-gray-900 to-black rounded-[30px] border-4 border-white/20 shadow-[0px_25px_60px_rgba(0,0,0,0.8),inset_0px_1px_0px_rgba(255,255,255,0.1)] px-2.5 py-4 flex flex-col transition-all duration-700 hover:shadow-[0px_35px_80px_rgba(0,0,0,0.9),inset_0px_2px_0px_rgba(255,255,255,0.2)] hover:scale-[1.05] hover:-translate-y-3 hover:rotate-x-3 hover:rotate-y-2 transform-gpu preserve-3d animate-fade-in-up">
         <div className="absolute inset-0 rounded-[30px] bg-gradient-to-br from-white/5 via-transparent to-black/20 pointer-events-none"></div>
       
         <div className="absolute inset-0 overflow-hidden rounded-[30px] pointer-events-none">
