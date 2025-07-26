@@ -84,6 +84,12 @@ export const AboutUsSection = (): JSX.Element => {
       className:
         "w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-20 lg:w-[191px] lg:h-[85px]",
     },
+     {
+      src: "/figmaAssets/collaborator-removebg-preview.png",
+      alt: "CS POSTER",
+      className:
+        "w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-20 lg:w-[191px] lg:h-[85px]",
+    },
   ];
 
   React.useEffect(() => {
