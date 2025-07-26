@@ -1,4 +1,9 @@
-import { FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon } from "lucide-react";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  LinkedinIcon,
+} from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +15,12 @@ import {
   faMapMarkerAlt,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Bubble = ({
   className,
@@ -98,13 +108,7 @@ export const ContactUsSection = (): JSX.Element => {
     { name: "Register", href: "#tickets" },
   ];
 
-  const resources = [
-    { name: "Code of Conduct", href: "#" },
-    { name: "FAQs", href: "#" },
-    { name: "Past Events", href: "#" },
-    { name: "Media Kit", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-  ];
+  
 
   return (
     <section
@@ -142,6 +146,7 @@ export const ContactUsSection = (): JSX.Element => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-5"></div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        {/* Contact Us Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-8">
             <div className="w-16 sm:w-20 h-0.5 bg-red-500"></div>
@@ -152,15 +157,15 @@ export const ContactUsSection = (): JSX.Element => {
           <h2 className="font-['Poppins',sans-serif] font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6 tracking-wide drop-shadow-2xl">
             Contact <span className="text-red-400">Us</span>
           </h2>
-          
+
           <p className="font-['Poppins',sans-serif] text-white/90 text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-            Get in touch with us for any queries, collaborations, or sponsorship opportunities. 
-            We'd love to hear from you and make TechX Madras even better together.
+            Get in touch with us for any queries, collaborations, or sponsorship
+            opportunities. We'd love to hear from you and make TechX Madras even
+            better together.
           </p>
         </div>
 
-
-        <div className="mb-12">
+        <div className="mb-20">
           <div className="relative group max-w-6xl mx-auto">
             <div className="absolute -inset-4 bg-gradient-to-br from-white/12 via-gray-500/8 to-white/6 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-all duration-400"></div>
 
@@ -186,19 +191,23 @@ export const ContactUsSection = (): JSX.Element => {
             </Card>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 mb-12">
+          {/* TechX Madras Section */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
-              <h3 className="font-['Poppins',sans-serif] font-bold text-white text-2xl lg:text-3xl mb-4 drop-shadow-lg">
+            <div className="mb-8">
+              <h3 className="font-['Poppins',sans-serif] font-bold text-white text-2xl lg:text-3xl mb-6 drop-shadow-lg">
                 TechX Madras
               </h3>
-              <p className="font-['Poppins',sans-serif] text-white/90 text-base lg:text-lg leading-relaxed">
-                India's premier technology conference, bringing together innovators, thinkers, and creators since 2018.
+              <p className="font-['Poppins',sans-serif] text-white/90 text-base lg:text-lg leading-relaxed mb-8">
+                India's premier technology conference, bringing together
+                innovators, thinkers, and creators since 2018.
               </p>
             </div>
-            <div className="flex space-x-4">
-              <a
+
+            {/* Social Media Icons */}
+            <div className="flex space-x-6">
+ <a
                 href="https://www.instagram.com/ssit_ieee_cs_society/"
                 className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20"
                 aria-label="Instagram"
@@ -215,15 +224,15 @@ export const ContactUsSection = (): JSX.Element => {
             </div>
           </div>
           <div className="lg:col-span-1">
-            <h4 className="font-['Poppins',sans-serif] font-semibold text-white text-xl lg:text-2xl mb-6 drop-shadow-lg">
+            <h4 className="font-['Poppins',sans-serif] font-semibold text-white text-xl lg:text-2xl mb-8 drop-shadow-lg">
               QUICK LINKS
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="font-['Poppins',sans-serif] text-white/80 hover:text-white text-base lg:text-lg transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="font-['Poppins',sans-serif] text-white/80 hover:text-white text-base lg:text-lg transition-colors duration-300 hover:translate-x-2 inline-block"
                   >
                     {link.name}
                   </a>
@@ -232,20 +241,20 @@ export const ContactUsSection = (): JSX.Element => {
             </ul>
           </div>
           <div className="lg:col-span-1">
-            <h4 className="font-['Poppins',sans-serif] font-semibold text-white text-xl lg:text-2xl mb-6 drop-shadow-lg">
+            <h4 className="font-['Poppins',sans-serif] font-semibold text-white text-xl lg:text-2xl mb-8 drop-shadow-lg">
               CONTACT
             </h4>
-            <div className="space-y-5">
-                <div>
-                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-2">
+            <div className="space-y-6">
+              <div>
+                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-3">
                   CS Advisor
                 </p>
                 <p className="font-['Poppins',sans-serif] text-white/80 text-base">
                   Mr. Parthiban M
                 </p>
               </div>
-                           <div>
-                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-2">
+              <div>
+                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-3">
                   CS Chair
                 </p>
                 <p className="font-['Poppins',sans-serif] text-white/80 text-base">
@@ -253,22 +262,22 @@ export const ContactUsSection = (): JSX.Element => {
                 </p>
               </div>
               <div>
-                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-2">
+                <p className="font-['Poppins',sans-serif] font-semibold text-white text-lg mb-3">
                   Address
                 </p>
                 <p className="font-['Poppins',sans-serif] text-white/80 text-base leading-relaxed">
-                  Sri Sairam Institute of Technology<br />
+                  Sri Sairam Institute of Technology
+                  <br />
                   Chennai, Tamil Nadu 600044
                 </p>
               </div>
 
- 
-
-
-
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <FontAwesomeIcon icon={faEnvelope} className="text-red-400 text-sm" />
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="text-red-400 text-base"
+                  />
                   <span className="font-['Poppins',sans-serif] text-white/80 text-base">
                     techxmadras25@gmail.com
                   </span>
@@ -302,75 +311,187 @@ export const ContactUsSection = (): JSX.Element => {
       <style jsx>
         {`
           .animate-bubble1 {
-            animation: bubbleAppearMove1 12s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: bubbleAppearMove1 12s infinite
+              cubic-bezier(0.4, 0, 0.2, 1) alternate;
           }
           .animate-bubble2 {
-            animation: bubbleAppearMove2 10s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: bubbleAppearMove2 10s infinite
+              cubic-bezier(0.4, 0, 0.2, 1) alternate;
           }
           .animate-bubble3 {
-            animation: bubbleAppearMove3 14s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: bubbleAppearMove3 14s infinite
+              cubic-bezier(0.4, 0, 0.2, 1) alternate;
           }
           .animate-bubble4 {
-            animation: bubbleAppearMove4 16s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: bubbleAppearMove4 16s infinite
+              cubic-bezier(0.4, 0, 0.2, 1) alternate;
           }
           .animate-bubble5 {
-            animation: bubbleAppearMove5 18s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: bubbleAppearMove5 18s infinite
+              cubic-bezier(0.4, 0, 0.2, 1) alternate;
           }
           .animate-bean1 {
-            animation: beanAppearMove1 13s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: beanAppearMove1 13s infinite cubic-bezier(0.4, 0, 0.2, 1)
+              alternate;
           }
           .animate-bean2 {
-            animation: beanAppearMove2 11s infinite cubic-bezier(.4,0,.2,1) alternate;
+            animation: beanAppearMove2 11s infinite cubic-bezier(0.4, 0, 0.2, 1)
+              alternate;
           }
 
           @keyframes bubbleAppearMove1 {
-            0%   { opacity: 0; transform: translateY(0) scale(0.7) rotateY(0deg);}
-            10%  { opacity: 1; transform: translateY(0) scale(1) rotateY(10deg);}
-            50%  { opacity: 1; transform: translateY(-40px) scale(1.15) rotateY(25deg); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) scale(0.7) rotateY(0deg);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateY(0deg);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) scale(1) rotateY(10deg);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(-40px) scale(1.15) rotateY(25deg);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateY(0deg);
+            }
           }
           @keyframes bubbleAppearMove2 {
-            0%   { opacity: 0; transform: translateY(0) scale(0.7) rotateX(0deg);}
-            10%  { opacity: 1; transform: translateY(0) scale(1) rotateX(10deg);}
-            50%  { opacity: 1; transform: translateY(30px) scale(0.95) rotateX(25deg); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) scale(0.7) rotateX(0deg);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateX(0deg);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) scale(1) rotateX(10deg);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(30px) scale(0.95) rotateX(25deg);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateX(0deg);
+            }
           }
           @keyframes bubbleAppearMove3 {
-            0%   { opacity: 0; transform: translateY(0) scale(0.7) rotateZ(0deg);}
-            10%  { opacity: 1; transform: translateY(0) scale(1) rotateZ(10deg);}
-            50%  { opacity: 1; transform: translateY(-60px) scale(1.2) rotateZ(25deg); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) scale(0.7) rotateZ(0deg);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateZ(0deg);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) scale(1) rotateZ(10deg);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(-60px) scale(1.2) rotateZ(25deg);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateZ(0deg);
+            }
           }
           @keyframes bubbleAppearMove4 {
-            0%   { opacity: 0; transform: translateY(0) scale(0.7) rotateY(0deg);}
-            10%  { opacity: 1; transform: translateY(0) scale(1) rotateY(10deg);}
-            50%  { opacity: 1; transform: translateY(-30px) scale(1.1) rotateY(20deg); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) scale(0.7) rotateY(0deg);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateY(0deg);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) scale(1) rotateY(10deg);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(-30px) scale(1.1) rotateY(20deg);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateY(0deg);
+            }
           }
           @keyframes bubbleAppearMove5 {
-            0%   { opacity: 0; transform: translateY(0) scale(0.7) rotateX(0deg);}
-            10%  { opacity: 1; transform: translateY(0) scale(1) rotateX(10deg);}
-            50%  { opacity: 1; transform: translateY(40px) scale(1.2) rotateX(20deg); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) scale(0.7) rotateX(0deg);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateX(0deg);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) scale(1) rotateX(10deg);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(40px) scale(1.2) rotateX(20deg);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) scale(0.7) rotateX(0deg);
+            }
           }
           @keyframes beanAppearMove1 {
-            0%   { opacity: 0; transform: translateX(0) rotate(-10deg) scale(0.7);}
-            10%  { opacity: 1; transform: translateX(0) rotate(-10deg) scale(1);}
-            50%  { opacity: 1; transform: translateX(-30px) rotate(20deg) scale(1.1); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateX(0) rotate(-10deg) scale(0.7);}
+            0% {
+              opacity: 0;
+              transform: translateX(0) rotate(-10deg) scale(0.7);
+            }
+            10% {
+              opacity: 1;
+              transform: translateX(0) rotate(-10deg) scale(1);
+            }
+            50% {
+              opacity: 1;
+              transform: translateX(-30px) rotate(20deg) scale(1.1);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateX(0) rotate(-10deg) scale(0.7);
+            }
           }
           @keyframes beanAppearMove2 {
-            0%   { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.7);}
-            10%  { opacity: 1; transform: translateY(0) rotate(0deg) scale(1);}
-            50%  { opacity: 1; transform: translateY(40px) rotate(25deg) scale(1.1); filter: drop-shadow(0 8px 32px #80000088);}
-            90%  { opacity: 1; }
-            100% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.7);}
+            0% {
+              opacity: 0;
+              transform: translateY(0) rotate(0deg) scale(0.7);
+            }
+            10% {
+              opacity: 1;
+              transform: translateY(0) rotate(0deg) scale(1);
+            }
+            50% {
+              opacity: 1;
+              transform: translateY(40px) rotate(25deg) scale(1.1);
+              filter: drop-shadow(0 8px 32px #80000088);
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(0) rotate(0deg) scale(0.7);
+            }
           }
         `}
       </style>
