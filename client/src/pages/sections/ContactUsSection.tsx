@@ -194,13 +194,13 @@ export const ContactUsSection = (): JSX.Element => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center justify-center mb-10">
           <div className="bg-white/10 p-8 rounded-3xl backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_0_rgba(80,0,0,0.45)]">
-            <h2 className="[font-family:'Aoboshi_One',Helvetica] font-semibold text-white text-6xl drop-shadow-2xl tracking-wide">
+            <h2 className="[font-family:'Poppins',sans-serif] font-bold text-white text-6xl drop-shadow-2xl tracking-wide">
               Contact Us
             </h2>
           </div>
         </div>
         <div className="flex justify-center mb-20 lg:mb-24">
-          <p className="max-w-3xl [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-2xl text-center leading-relaxed drop-shadow-lg">
+          <p className="max-w-3xl [font-family:'Poppins',sans-serif] font-normal text-white text-2xl text-center leading-relaxed drop-shadow-lg">
             Be part of something extraordinary. Join us at TechX 2025 to
             explore, excel, and experience the future of technology. Discover
             how you can contribute to innovation, connect with visionaries, and
@@ -254,11 +254,11 @@ export const ContactUsSection = (): JSX.Element => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="font-['Inter',sans-serif] font-semibold text-white text-lg lg:text-xl mb-3">
+                      <div className="font-['Poppins',sans-serif] font-semibold text-white text-lg lg:text-xl mb-3">
                         {info.title}
                       </div>
                       {info.details && (
-                        <div className="font-['Inter',sans-serif] font-medium text-white/85 text-sm lg:text-base leading-relaxed">
+                        <div className="font-['Poppins',sans-serif] font-medium text-white/85 text-sm lg:text-base leading-relaxed">
                           {info.details}
                         </div>
                       )}
@@ -271,7 +271,7 @@ export const ContactUsSection = (): JSX.Element => {
                                 className="text-sm text-pink-400"
                               />
                             </div>
-                            <span className="font-['Inter',sans-serif] text-white/85 text-sm lg:text-base">
+                            <span className="font-['Poppins',sans-serif] text-white/85 text-sm lg:text-base">
                               {info.social.instagram}
                             </span>
                           </div>
@@ -282,7 +282,7 @@ export const ContactUsSection = (): JSX.Element => {
                                 className="text-sm text-blue-400"
                               />
                             </div>
-                            <span className="font-['Inter',sans-serif] text-white/85 text-sm lg:text-base">
+                            <span className="font-['Poppins',sans-serif] text-white/85 text-sm lg:text-base">
                               {info.social.facebook}
                             </span>
                           </div>
@@ -311,10 +311,10 @@ export const ContactUsSection = (): JSX.Element => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="font-['Inter',sans-serif] font-semibold text-white text-lg lg:text-xl mb-3">
+                  <div className="font-['Poppins',sans-serif] font-semibold text-white text-lg lg:text-xl mb-3">
                     {addressInfo.title}
                   </div>
-                  <div className="font-['Inter',sans-serif] font-medium text-white/85 text-sm lg:text-base leading-relaxed">
+                  <div className="font-['Poppins',sans-serif] font-medium text-white/85 text-sm lg:text-base leading-relaxed">
                     {addressInfo.details}
                   </div>
                 </div>
@@ -326,7 +326,7 @@ export const ContactUsSection = (): JSX.Element => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-white/6 rounded-lg blur-sm opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="relative bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/15 rounded-lg px-6 py-4 lg:px-8 lg:py-6 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
-              <div className="font-['Inter',sans-serif] font-medium text-white text-sm lg:text-base text-center opacity-90 leading-relaxed">
+              <div className="font-['Poppins',sans-serif] font-medium text-white text-sm lg:text-base text-center opacity-90 leading-relaxed">
                 © Copyright IEEE SSIT SBC. All Rights Reserved
                 <br />
                 <span className="text-white/75">

@@ -203,10 +203,10 @@ export const HeroSection = (): JSX.Element => {
               <div className="relative mb-12 group flex justify-center">
                 <div className="absolute -inset-2 bg-gradient-to-r from-red-500/5 via-white/10 to-red-500/5 rounded-full blur-2xl opacity-60" />
                 <div className="absolute -inset-1 bg-gradient-to-br from-white/5 to-red-500/10 rounded-2xl blur-lg" />
-                <h2 className="[font-family:'Aoboshi_One',Helvetica] font-light text-lg sm:text-xl md:text-2xl lg:text-2xl text-center tracking-[0.15em] leading-relaxed relative z-10 max-w-2xl">
+                <h2 className="[font-family:'Poppins',sans-serif] font-medium text-lg sm:text-xl md:text-2xl lg:text-2xl text-center tracking-[0.1em] leading-relaxed relative z-10 max-w-2xl">
                   <span className="inline-block px-6 py-4 rounded-full bg-gradient-to-br from-white/15 via-white/10 to-red-500/15 backdrop-blur-2xl border-2 border-white/20 shadow-[0_15px_35px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.2)] relative overflow-hidden">
                     <span className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-red-500/10 rounded-full" />
-                    <span className="relative z-10 bg-gradient-to-r from-white via-red-100 via-white to-red-200 bg-clip-text text-transparent font-medium italic drop-shadow-[0_2px_8px_rgba(255,255,255,0.2)]">
+                    <span className="relative z-10 bg-gradient-to-r from-white via-red-100 via-white to-red-200 bg-clip-text text-transparent font-semibold italic drop-shadow-[0_2px_8px_rgba(255,255,255,0.2)]">
                       "Where Innovation Meets Excellence"
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 rounded-full" />

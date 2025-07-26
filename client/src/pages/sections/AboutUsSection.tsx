@@ -240,7 +240,7 @@ export const AboutUsSection = (): JSX.Element => {
                   <div className="relative flex items-center justify-center w-full max-w-[280px] px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-br from-black/95 via-red-950/40 to-black/95 rounded-2xl sm:rounded-3xl border-2 border-red-600/60 shadow-[0_25px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(220,38,38,0.5)] transition-all duration-700 hover:-translate-y-1 sm:hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-xl">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent -skew-x-12 -translate-x-full group-hover/badge:translate-x-full transition-transform duration-1200"></div>
 
-                    <div className="relative [font-family:'Crimson_Text',Helvetica] font-normal text-white text-2xl sm:text-3xl md:text-4xl drop-shadow-2xl tracking-wide text-center">
+                    <div className="relative [font-family:'Poppins',sans-serif] font-medium text-white text-2xl sm:text-3xl md:text-4xl drop-shadow-2xl tracking-wide text-center">
                       Now Live In
                     </div>
                   </div>
@@ -258,10 +258,10 @@ export const AboutUsSection = (): JSX.Element => {
                         <div className="absolute inset-0 bg-gradient-to-br from-red-600/8 via-transparent to-red-600/5 rounded-2xl sm:rounded-3xl pointer-events-none"></div>
 
                         <CardContent className="relative p-0 h-full flex flex-col items-center justify-center z-10">
-                          <div className="[font-family:'Inter',Helvetica] font-bold text-red-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-2xl group-hover/card:text-red-400 transition-all duration-500 tracking-wider">
+                          <div className="[font-family:'Poppins',sans-serif] font-bold text-red-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-2xl group-hover/card:text-red-400 transition-all duration-500 tracking-wider">
                             {item.value}
                           </div>
-                          <div className="[font-family:'Inter',Helvetica] font-bold text-white text-xs sm:text-sm md:text-lg lg:text-xl tracking-[1px] sm:tracking-[2px] mt-2 sm:mt-3 md:mt-4 drop-shadow-xl group-hover/card:text-gray-100 transition-all duration-500">
+                          <div className="[font-family:'Poppins',sans-serif] font-semibold text-white text-xs sm:text-sm md:text-lg lg:text-xl tracking-[1px] sm:tracking-[2px] mt-2 sm:mt-3 md:mt-4 drop-shadow-xl group-hover/card:text-gray-100 transition-all duration-500">
                             {item.label}
                           </div>
                         </CardContent>
@@ -281,7 +281,7 @@ export const AboutUsSection = (): JSX.Element => {
               <div className="absolute -inset-3 bg-black/80 rounded-2xl blur-xl opacity-90"></div>
               <div className="relative bg-gradient-to-br from-black/90 via-red-950/20 to-black/90 backdrop-blur-2xl border-2 border-red-600/40 rounded-3xl px-10 py-6 shadow-[0_35px_80px_rgba(0,0,0,0.8)] hover:shadow-[0_40px_100px_rgba(220,38,38,0.4)] transition-all duration-1000 hover:-translate-y-3 hover:scale-105 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-3xl pointer-events-none"></div>
-                <h2 className="relative [font-family:'Aoboshi_One',Helvetica] font-normal text-5xl text-center drop-shadow-2xl tracking-wide">
+                <h2 className="relative [font-family:'Poppins',sans-serif] font-semibold text-5xl text-center drop-shadow-2xl tracking-wide">
                   <span className="text-white drop-shadow-[0_6px_20px_rgba(255,255,255,0.4)]">
                     What is Tech
                   </span>
@@ -300,7 +300,7 @@ export const AboutUsSection = (): JSX.Element => {
               <div className="relative bg-gradient-to-br from-black/95 via-red-950/15 to-black/95 backdrop-blur-2xl border-2 border-red-600/30 rounded-3xl p-10 shadow-[0_40px_100px_rgba(0,0,0,0.9)] hover:shadow-[0_50px_120px_rgba(220,38,38,0.3)] transition-all duration-1000 hover:-translate-y-4 hover:scale-[1.01] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-3xl pointer-events-none"></div>
 
-                <p className="relative [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-xl text-justify leading-relaxed drop-shadow-xl tracking-wide">
+                <p className="relative [font-family:'Poppins',sans-serif] font-normal text-white text-xl text-justify leading-relaxed drop-shadow-xl tracking-wide">
                   TechX Madras is a premier initiative hosted by the IEEE CS SBC
                   of SSIT, as part of the IEEE CS SYP TechX series, in
                   association with the IEEE CS Madras Chapter. Gathering over
@@ -321,7 +321,7 @@ export const AboutUsSection = (): JSX.Element => {
               <div className="absolute -inset-2 sm:-inset-3 bg-black/80 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl opacity-95"></div>
               <div className="relative bg-gradient-to-br from-black/95 via-red-950/20 to-black/95 backdrop-blur-2xl border-2 border-red-600/40 rounded-2xl sm:rounded-3xl px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 shadow-[0_35px_80px_rgba(0,0,0,0.9)] hover:shadow-[0_40px_100px_rgba(220,38,38,0.3)] transition-all duration-1000 hover:-translate-y-2 sm:hover:-translate-y-3 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/6 via-transparent to-red-600/4 rounded-2xl sm:rounded-3xl pointer-events-none"></div>
-                <h3 className="relative opacity-95 text-center [font-family:'Aoboshi_One',Helvetica] font-normal text-white text-3xl sm:text-4xl md:text-5xl drop-shadow-2xl tracking-wide">
+                <h3 className="relative opacity-95 text-center [font-family:'Poppins',sans-serif] font-semibold text-white text-3xl sm:text-4xl md:text-5xl drop-shadow-2xl tracking-wide">
                   Our Collaborators
                 </h3>
               </div>

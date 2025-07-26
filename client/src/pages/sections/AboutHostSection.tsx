@@ -42,7 +42,7 @@ export const AboutHostSection = (): JSX.Element => {
             </div>
 
   
-            <div className="bg-black/25 rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl backdrop-blur-sm">
+            {/* <div className="bg-black/25 rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl backdrop-blur-sm">
               <div className="text-center">
                 <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400 mb-3 block drop-shadow-lg">
                   1527+
@@ -104,7 +104,7 @@ export const AboutHostSection = (): JSX.Element => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col space-y-6 lg:space-y-8">

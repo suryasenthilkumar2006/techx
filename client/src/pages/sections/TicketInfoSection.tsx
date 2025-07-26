@@ -111,19 +111,20 @@ export const TicketInfoSection = (): JSX.Element => {
             <div className="relative inline-flex items-center justify-center gap-2.5 mb-4">
               <div className="relative group/price">
       
-                <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-xl text-center mb-3 drop-shadow-xl transition-all duration-300 group-hover:text-gray-100 group-hover:scale-105">
+                <div className="[font-family:'Poppins',sans-serif] font-semibold text-white text-xl text-center mb-3 drop-shadow-xl transition-all duration-300 group-hover:text-gray-100 group-hover:scale-105">
                   {ticket.type}
             </div>
   
                 <div className="relative flex flex-col items-center gap-2">
+
                   <div className="relative">
-                    <div className="[font-family:'Istok_Web',Helvetica] font-bold text-gray-400 text-[24px] text-center drop-shadow-lg line-through decoration-red-500 decoration-2 opacity-70 transition-all duration-300 group-hover:opacity-50">
+                    <div className="[font-family:'Poppins',sans-serif] font-semibold text-gray-400 text-[24px] text-center drop-shadow-lg line-through decoration-red-500 decoration-2 opacity-70 transition-all duration-300 group-hover:opacity-50">
                       {ticket.originalPrice}
                     </div>
                     <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 transform -translate-y-1/2 animate-pulse"></div>
                   </div>
                   <div className="relative">
-                    <div className="[font-family:'Istok_Web',Helvetica] font-bold text-green-400 text-[40px] text-center drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:text-green-300 animate-pulse">
+                    <div className="[font-family:'Poppins',sans-serif] font-bold text-green-400 text-[40px] text-center drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:text-green-300 animate-pulse">
                       {ticket.offerPrice}
                     </div>
                     <div className="absolute -top-2 -left-2 w-3 h-3 bg-gradient-to-br from-green-400 to-green-600 rounded-full animate-pulse shadow-lg"></div>
@@ -154,7 +155,7 @@ export const TicketInfoSection = (): JSX.Element => {
                     </div>
                   </div>
  
-                  <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-[20px] flex-1 drop-shadow-lg transition-all duration-300 group-hover/benefit:text-gray-100 relative">
+                  <div className="[font-family:'Poppins',sans-serif] font-medium text-white text-[20px] flex-1 drop-shadow-lg transition-all duration-300 group-hover/benefit:text-gray-100 relative">
                   {benefit}
  
                     <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-400 to-red-600 transition-all duration-300 group-hover/benefit:w-full"></div>
@@ -171,7 +172,7 @@ export const TicketInfoSection = (): JSX.Element => {
 
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover/button:translate-x-full transition-transform duration-1000"></div>
               
-              <span className="relative [font-family:'Istok_Web',Helvetica] font-bold text-white text-2xl text-center drop-shadow-lg transition-all duration-300 group-hover/button:text-gray-100">
+              <span className="relative [font-family:'Poppins',sans-serif] font-semibold text-white text-2xl text-center drop-shadow-lg transition-all duration-300 group-hover/button:text-gray-100">
             Register
           </span>
         </Button>
@@ -227,7 +228,7 @@ export const TicketInfoSection = (): JSX.Element => {
  
         <div className="text-center mb-16 relative">
           <div className="relative group perspective-1000 inline-block">
-            <h1 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-white text-6xl lg:text-7xl mb-4 transition-all duration-700 hover:scale-105 hover:rotate-x-3 transform-gpu preserve-3d cursor-default">
+            <h1 className="[font-family:'Poppins',sans-serif] font-bold text-white text-6xl lg:text-7xl mb-4 transition-all duration-700 hover:scale-105 hover:rotate-x-3 transform-gpu preserve-3d cursor-default">
               <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
                 Reserve Your 
               </span>
@@ -250,7 +251,7 @@ export const TicketInfoSection = (): JSX.Element => {
 
         <div className="mb-20">
           <div className="relative group perspective-1000 mb-12">
-            <h2 className="text-center [font-family:'Istok_Web',Helvetica] font-bold text-white text-[36px] lg:text-[42px] transition-all duration-500 hover:scale-105 hover:text-red-100 cursor-default drop-shadow-xl">
+            <h2 className="text-center [font-family:'Poppins',sans-serif] font-semibold text-white text-[36px] lg:text-[42px] transition-all duration-500 hover:scale-105 hover:text-red-100 cursor-default drop-shadow-xl">
               <span className="bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
           Both Day Pass
               </span>
@@ -270,7 +271,7 @@ export const TicketInfoSection = (): JSX.Element => {
 
         <div className="mb-20">
           <div className="relative group perspective-1000 mb-12">
-            <h2 className="text-center [font-family:'Istok_Web',Helvetica] font-bold text-white text-[36px] lg:text-[42px] transition-all duration-500 hover:scale-105 hover:text-red-100 cursor-default drop-shadow-xl">
+            <h2 className="text-center [font-family:'Poppins',sans-serif] font-semibold text-white text-[36px] lg:text-[42px] transition-all duration-500 hover:scale-105 hover:text-red-100 cursor-default drop-shadow-xl">
               <span className="bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
           Day 2 Pass
               </span>
@@ -295,7 +296,7 @@ export const TicketInfoSection = (): JSX.Element => {
          
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               
-              <span className="relative [font-family:'Istok_Web',Helvetica] font-bold text-white text-[32px] drop-shadow-xl transition-all duration-300 group-hover:text-gray-100 z-10">
+              <span className="relative [font-family:'Poppins',sans-serif] font-semibold text-white text-[32px] drop-shadow-xl transition-all duration-300 group-hover:text-gray-100 z-10">
               Be an Early Bird
             </span>
         

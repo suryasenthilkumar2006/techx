@@ -263,7 +263,7 @@ const Bubble = ({
       <div className="container mx-auto relative z-20 px-4">
  
         <div className="text-center mb-16">
-          <h2 className="[font-family:'Aoboshi_One',Helvetica] text-5xl lg:text-6xl font-bold text-white mb-6 tracking-wide">
+          <h2 className="[font-family:'Poppins',sans-serif] text-5xl lg:text-6xl font-bold text-white mb-6 tracking-wide">
             Why be <span className="text-red-400">part of it</span>?
           </h2>
 
@@ -273,7 +273,7 @@ const Bubble = ({
             <div className="w-20 h-0.5 bg-red-500"></div>
           </div>
 
-          <p className="[font-family:'Aoboshi_One',Helvetica] text-gray-300 text-xl lg:text-2xl max-w-2xl mx-auto">
+          <p className="[font-family:'Poppins',sans-serif] text-gray-300 text-xl lg:text-2xl max-w-2xl mx-auto font-medium">
             Discover the transformative opportunities that await you
           </p>
         </div>
@@ -330,7 +330,7 @@ const Bubble = ({
                   >
                     <CardContent className="relative p-8">
                  
-                      <h3 className="[font-family:'Aoboshi_One',Helvetica] font-bold text-2xl text-black mb-4">
+                      <h3 className="[font-family:'Poppins',sans-serif] font-bold text-2xl text-black mb-4">
                         {card.title === "Insider Stories" ? (
                           <>
                             <span className="text-red-600">
@@ -348,7 +348,7 @@ const Bubble = ({
                         )}
                       </h3>
 
-                      <p className="[font-family:'Aoboshi_One',Helvetica] text-gray-600 text-base leading-relaxed">
+                      <p className="[font-family:'Poppins',sans-serif] text-gray-600 text-base leading-relaxed font-normal">
                         {card.description}
                       </p>
 
@@ -361,7 +361,7 @@ const Bubble = ({
           </div>
         </div>
 
-        <div className="container mx-auto mt-32 relative z-10 px-4">
+        {/* <div className="container mx-auto mt-32 relative z-10 px-4">
           <Card className="w-full max-w-6xl mx-auto bg-gradient-to-br from-white via-gray-50 to-white rounded-[60px] overflow-hidden shadow-[0px_25px_80px_rgba(0,0,0,0.6)] border-4 border-white/30 backdrop-blur-lg">
             <CardContent className="p-12 lg:p-20 relative">
               <div className="text-center mb-16">
@@ -370,10 +370,10 @@ const Bubble = ({
                   <div className="w-4 h-4 bg-[#780000] rounded-full"></div>
                   <div className="w-16 h-1 bg-gradient-to-l from-[#780000] to-[#450000]"></div>
                 </div>
-                <h2 className="[font-family:'Aoboshi_One',Helvetica] font-normal text-black text-5xl lg:text-6xl mb-4">
+                <h2 className="[font-family:'Poppins',sans-serif] font-semibold text-black text-5xl lg:text-6xl mb-4">
                   Meet our Speakers
                 </h2>
-                <p className="[font-family:'Aoboshi_One',Helvetica] text-gray-600 text-xl max-w-2xl mx-auto">
+                <p className="[font-family:'Poppins',sans-serif] text-gray-600 text-xl max-w-2xl mx-auto font-normal">
                   Industry experts and thought leaders ready to share their
                   insights
                 </p>
@@ -399,10 +399,10 @@ const Bubble = ({
                           )}
                         </div>
                         <div className="text-center space-y-3">
-                          <div className="[font-family:'Istok_Web',Helvetica] font-bold text-white text-sm opacity-90 group-hover:opacity-100 transition-opacity duration-300 tracking-wide">
+                          <div className="[font-family:'Poppins',sans-serif] font-bold text-white text-sm opacity-90 group-hover:opacity-100 transition-opacity duration-300 tracking-wide">
                             {speaker.name}
                           </div>
-                          <div className="[font-family:'Istok_Web',Helvetica] font-medium text-white/70 text-xs group-hover:text-white/90 transition-colors duration-300">
+                          <div className="[font-family:'Poppins',sans-serif] font-medium text-white/70 text-xs group-hover:text-white/90 transition-colors duration-300">
                             {speaker.day}
                           </div>
                           <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto group-hover:via-white/70 transition-colors duration-300"></div>
@@ -434,22 +434,22 @@ const Bubble = ({
               ></div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
    
-        <div className="mt-32 text-center">
+        {/* <div className="mt-32 text-center">
           <div className="relative inline-block group">
             <div className="absolute -inset-6 bg-red-600/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-1000"></div>
             <div className="relative bg-gradient-to-br from-black/80 via-red-900/40 to-black/80 backdrop-blur-2xl p-8 rounded-3xl border-2 border-red-600/30 shadow-[0_30px_80px_rgba(0,0,0,0.7)] transition-all duration-1000 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 via-transparent to-red-600/5 rounded-3xl"></div>
-              <h2 className="relative [font-family:'Aoboshi_One',Helvetica] font-bold text-4xl lg:text-5xl text-white mb-4">
+              <h2 className="relative [font-family:'Poppins',sans-serif] font-bold text-4xl lg:text-5xl text-white mb-4">
                 Our Sponsors
               </h2>
-              <p className="relative [font-family:'Aoboshi_One',Helvetica] text-xl lg:text-2xl text-gray-400">
+              <p className="relative [font-family:'Poppins',sans-serif] text-xl lg:text-2xl text-gray-400 font-normal">
                 People who helped to make this event happen
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`
