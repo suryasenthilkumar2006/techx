@@ -199,18 +199,18 @@ export const ContactUsSection = (): JSX.Element => {
             </div>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/ssit_ieee_cs_society/"
                 className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20"
                 aria-label="Instagram"
               >
                 <FontAwesomeIcon icon={faInstagram} className="text-white text-lg" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/ieee-computer-society-ssit/"
                 className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/20"
-                aria-label="Facebook"
+                aria-label="LinkedIn"
               >
-                <FontAwesomeIcon icon={faFacebook} className="text-white text-lg" />
+                <FontAwesomeIcon icon={faLinkedin} className="text-white text-lg" />
               </a>
             </div>
           </div>
