@@ -5,5 +5,7 @@
     }
     
 ],
+    "redirects":[],
+    "headers":[],
     "cleanUrls":true
 }
